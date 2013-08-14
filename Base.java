@@ -38,11 +38,14 @@ public final class Base extends JavaPlugin {
 								ChatColor.BLUE + p.getName() + ChatColor.BLUE + "Is not online!");
 					}
 				}else{
-					for(int i = 0; i > 64; p.sendMessage(ChatColor.RED + "#Trade: " + 
-							ChatColor.BLUE + "You cannot trade more than 64 of an item at once")){
-						if(args[1].length() < i){
-							
-						}
+					for(int i = 0; i > 32; caller.sendMessage(ChatColor.RED + "#Trade: " + 
+							ChatColor.BLUE + "You cannot trade more than 32 of an item at once")){
+						if(args[1].length() > i){
+							caller.sendMessage(ChatColor.RED + "#Trade: " +
+                                                    ChatColor.BLUE + "You cannot trade more than 32 of an item at once);
+						}else{
+                                            //TODO
+                                               }
 					}
 				}
 			}
