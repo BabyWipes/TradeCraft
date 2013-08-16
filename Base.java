@@ -77,7 +77,7 @@ public final class Base extends JavaPlugin {
 									moneyIsNumber = false;
 								}else{
 									int moneyTyped = args[2];
-									//Check how much money player has
+									Economy.getPlugin().//get amount of money player has 
 								}
 							}
 						}
