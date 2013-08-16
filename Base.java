@@ -66,22 +66,19 @@ public final class Base extends JavaPlugin {
 						}else{
 							
 							boolean moneyIsNumber = true;
+						
 							
-							if(getAmount > Integer.getInteger(getNumber) || getAmount == Integer.getInteger(getNumber)){
+							if(number = true){
 								try{
 									Integer.parseInt(args[2]);
-									
 								}catch(NumberFormatException e){
 									p.sendMessage(ChatColor.RED + "#Trade: " +
-									ChatColor.BLUE + "Invalid value!)
+									ChatColor.BLUE + "Please use /trade <player> <amount> <price>");
 									moneyIsNumber = false;
-									
+								}else{
+									int moneyTyped = args[2];
+									//Check how much money player has
 								}
-								
-								String getMoney = args[2];
-								
-								int getBalance = //get how much money person has
-								
 							}
 						}
 					}
