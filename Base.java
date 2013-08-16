@@ -62,10 +62,26 @@ public final class Base extends JavaPlugin {
 
 						if(getAmount < Integer.getInteger(getNumber) ){
 							caller.sendMessage(ChatColor.RED + "#Trade: " +
-									ChatColor.BLUE + "Incorrect amount!");
+									ChatColor.BLUE + "Invalid amount!");
 						}else{
+							
+							boolean moneyIsNumber = true;
+							
 							if(getAmount > Integer.getInteger(getNumber) || getAmount == Integer.getInteger(getNumber)){
-
+								try{
+									Integer.parseInt(args[2]);
+									
+								}catch(NumberFormatException e){
+									p.sendMessage(ChatColor.RED + "#Trade: " +
+									ChatColor.BLUE + "Invalid value!)
+									moneyIsNumber = false;
+									
+								}
+								
+								String getMoney = args[2];
+								
+								int getBalance = //get how much money person has
+								
 							}
 						}
 					}
