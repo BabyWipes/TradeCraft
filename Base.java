@@ -9,16 +9,35 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public final class Base extends JavaPlugin {
+	
+	public static Economy eco = null;
+	public static Chat chat = null;
+	
 
 	@Override 
 	public void onEnable(){
 		getLogger().info("[Trade] Plugin enabled!");
+		
+		if(!setupEconomy()){
+			log.severe(String.format("[%s] - Disabled due to no Economy dependency found!", 
+				getDescription().getName()));
+				getServer().getPluginManager().disablePlugin(this);
+				return;
+		}
 	}
 
 	@Override
 	public void onDisable(){
 		getLogger().info("[Trade] Plugin disabled!");
 	}
+
+	public boolean setupChat(){
+		//TODO - https://forums.bukkit.org/threads/getting-player-money.157665/
+	}
+
+
+
+
 
 
 
